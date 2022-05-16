@@ -1,0 +1,7 @@
+div {
+    margin: 50px 30px 40px 30px;
+    border: 2px solid blue;
+    padding: 10px 20px 30px 40px;
+    background: lightblue;
+    border-block-color: red;
+}

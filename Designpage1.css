@@ -1,0 +1,28 @@
+nav {
+    background-color: lightgrey;
+    height: 48px;
+}
+
+
+#menu {
+    list-style-type: none;
+    display: inline-flex;
+    float: right;
+}
+
+#menu li {
+    margin-right: 30px;
+}
+
+    #menu li a {
+        text-decoration: none;
+    }
+
+#banner {
+    margin-top: 3px;
+    background-image: url('nature1.jpeg');
+    height: 200px;
+    width: 100%;
+    background-position: bottom;
+}
+    

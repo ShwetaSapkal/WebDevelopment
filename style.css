@@ -1,0 +1,19 @@
+#p1 {
+    background-color: aqua;
+    font-size: 40x;
+}
+
+div {
+    background-color: blueviolet;
+    font-size: 30x;
+    color: white;
+}
+
+#p2 {
+    background-color: brown;
+    color: white;
+}
+
+.center-aligment {
+    text-align: center;
+}
