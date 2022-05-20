@@ -1,0 +1,14 @@
+#navbarSupportedContent {
+    list-style-type: none;
+    display: inline-flex;
+    float: right;
+}
+
+
+.d-block {
+    margin: auto;
+    position: absolute;
+}
+
+.Card {
+   }

@@ -1,0 +1,81 @@
+<!--<html>
+<head>
+    <style>
+    div +p {
+        background-color:yellow;
+        color:red;
+    }
+        .content {
+            display:none;
+        }
+        .test:hover  .content{display:block}
+    </style>
+    </head>
+<body>
+    <div>
+        <p>This is paragraph1</p>
+        <p>This is paragraph2</p>
+        <section>
+            <p>This is paragraph in section tag</p>
+        </section>
+
+        <p>This is paragraph3</p>
+    </div>
+    <p>This is paragraph4</p>
+    <p>This is paragraph5</p>
+
+    <div class="test">
+        this is sample division
+
+        <p class="content">
+            this is sample content
+            </p>
+        </div>
+</body>
+</html>
+    -->
+
+<html>
+<head>
+<style>
+    p::first-line {
+        color:blue;
+
+    }
+
+    p::first-letter {
+        color:red;
+        font-size:25px;
+    
+    }
+
+    p {
+        font-size:25px;
+        font-family:'Segoe UI',Tahoma,Verdana, Geneva, Tahoma, sans-serif;
+        font-style:italic;
+        text-transform:lowercase;
+        text-align:justify;
+       /* text-shadow:5px 5px 3px red;*/
+       word-spacing:8px;
+       line-height:1.5;
+       letter-spacing:5px;
+    }
+
+        p span {
+            color:blue;
+        }
+        p img {
+            float:right;
+            margin-left:10px;
+        }
+    </style>
+    </head>
+<body>
+
+<p>
+    <img src="furni2.jpeg"/>
+    <u>The .NET Framework</u> is a proprietary software framework developed by Microsoft that runs primarily on Microsoft Windows. <span>It was the predominant implementation of the Common Language</span> Infrastructure until being superseded by the cross-platform
+<br>To know more about us<a href="home.html">visit our site</a>
+</p>
+   </body>
+</html>

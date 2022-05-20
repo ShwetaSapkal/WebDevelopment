@@ -1,0 +1,13 @@
+body {
+    background-image:url(amazonlogo.svg);
+    background-attachment:fixed;
+    background-size:cover;
+    font-family:'Times New Roman' 
+}
+
+h3 {
+    font-size:40px;
+    color:gray;
+    margin-top:20px;
+    margin-bottom:30px;
+}
