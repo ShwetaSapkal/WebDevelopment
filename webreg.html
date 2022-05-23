@@ -16,8 +16,8 @@
             */
 
         body {
-            background-color:bisque;
-           background-attachment: fixed;
+            background-color: bisque;
+            background-attachment: fixed;
             background-size: cover;
             font-family: 'Times New Roman'
         }
@@ -33,20 +33,19 @@
 
 
         .label {
-            font-size:19px;
-            margin-left:250px;
-            font-weight:normal;
+            font-size: 19px;
+            margin-left: 250px;
+            font-weight: normal;
         }
 
         .form-control {
-            /*background: rgba(255,255,255,0.2);*/
-            background-color:white;
-            border:0px;
-            border-radius:0px;
-            border-bottom:2px solid lightblue;
-            font-size:21px;
-            color:blue;
-            margin-left:20px;
+            background: rgba(255,255,255,0.2);
+            border: 0px;
+            border-radius: 0px;
+            border-bottom: 2px solid lightblue;
+            font-size: 21px;
+            color: white;
+            margin-left: 20px;
         }
 
         small {
@@ -65,10 +64,8 @@
 
 
         .card-body {
-           
-            background-color:darkslategrey;
+            background-color: darkslategrey;
         }
-       
     </style>
 
 
@@ -77,9 +74,8 @@
 <body>
 
 
-
     <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">AMAZON</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,92 +128,53 @@
 
         </div>
 
-        <form action="WebsiteLogin.html">
-            <div class="container">
 
+        <div class="container">
 
-                <div class="row">
-
-                    <br>
-                    <label class="label col-md-2 control-label"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Enter Username</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" name="name" id="Input1" placeholder="name">
-                    </div>
-                </div>
-
+            <div class="row">
                 <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-                    <div class="col-md-4">
-                        <input type="email" class="form-control" name="email" id="Input2" placeholder="name@gmail.com">
-                    </div>
+                <label class="label col-md-2 control-label"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Enter Username</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="name" placeholder="name" id="t1">
                 </div>
-
-                <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password</label>
-                    <div class="col-md-4">
-                        <input type="password" class="form-control" name="password" id="Input3" placeholder="password">
-                        <small>Password must be 8 characters</small>
-                    </div>
-                </div>
-
-                <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Confirm Password</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" name="confirm" id="Input4" placeholder="confirm password">
-
-
-                    </div>
-                    <p>
-                        <small id="error"></small>
-                    </p>
-                </div>
-
-                <input type="submit" div class="btn btn-info" value="signup" onclick="validatePassword()">
             </div>
 
+            <br>
+            <div class="row">
+                <label class="label col-md-2 control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                <div class="col-md-4">
+                    <input type="email" class="form-control" name="email" placeholder="name@gmail.com" id="t2">
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password</label>
+                <div class="col-md-4">
+                    <input type="password" class="form-control" name="password" placeholder="password" id="t3">
+                    <small>Password must be 8 characters</small>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Confirm Password</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="confirm" placeholder="confirm password" id="t4">
 
 
-   
-    </form>
-  
+                </div>
+            </div>
+
+            <a href="#"><div class="btn btn-info" onclick="save()">Sumbit</div></a>
+
+
+
+        </div>
+        <div class="col-md-3"></div>
+
 
     </div>
-
-
-
-    <script>
-        function validatePassword() {
-            var email = document.getElementById("Input2").value;
-            var pass = document.getElementById("Input3").value;
-            var cpass = document.getElementById("Input4").value;
-
-            if (pass == cpass) {
-               
-                document.getElementById("error").innerHTML = "";
-                    localStorage.setItem("emailid", email);
-                    localStorage.setItem("password", pass);
-                
-
-               
-                return true;
-            }
-            else {
-                document.getElementById("error").innerHTML = "password does not match";
-                return false;
-            }
-
-        }
-
-    </script>
-
-
-
-
-
-
 
 
 
@@ -239,7 +196,25 @@
 
 
 
-
+    <script>
+        function save() {
+            var name = document.getElementById("t1").value;
+            var mail = document.getElementById("t2").value;
+            var pass= document.getElementById("t3").value;
+            var confirmpass = document.getElementById("t4").value;
+            // support of localstorage on the browser
+            if (localStorage) {
+                localStorage.setItem("username", name);
+                localStorage.setItem("email", pass);
+                localStorage.setItem("password", pass);
+                localStorage.setItem("confirmpassword", pass);
+                alert('successfully registered');
+            }
+            else {
+                console.log('does not support local storage');
+            }
+        }
+    </script>
 
 
 

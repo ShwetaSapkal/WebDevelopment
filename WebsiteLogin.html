@@ -5,21 +5,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
     <style>
 
-        /** {
-            margin:0px;
-            padding:0px;
-        }
-            */
-
         body {
-            background-color:bisque;
-           background-attachment: fixed;
+
+            background-color:lightblue;
+          
+            background-attachment: fixed;
             background-size: cover;
             font-family: 'Times New Roman'
+        }
+
+        .label {
+            font-size: 19px;
+            margin-left: 300px;
+            font-weight: normal;
         }
 
         h4 {
@@ -31,31 +31,18 @@
         }
 
 
-
-        .label {
-            font-size:19px;
-            margin-left:250px;
-            font-weight:normal;
-        }
-
         .form-control {
             /*background: rgba(255,255,255,0.2);*/
-            background-color:white;
-            border:0px;
-            border-radius:0px;
-            border-bottom:2px solid lightblue;
-            font-size:21px;
-            color:blue;
-            margin-left:20px;
-        }
-
-        small {
-            font-size: 14px;
-            color: gray;
+            background-color: white;
+            border: 0px;
+            border-radius: 0px;
+            border-bottom: 2px solid lightblue;
+            font-size: 21px;
+            color: blue;
             margin-left: 20px;
         }
 
-        .btn-info {
+        .btn-light{
             margin-top: 30px;
             margin-left: 400px;
             width: 180px;
@@ -64,13 +51,19 @@
         }
 
 
-        .card-body {
-           
-            background-color:darkslategrey;
+        .btn-danger {
+            margin-top: 30px;
+            margin-left: 300px;
+            width: 180px;
+            font-size: 19px;
+            border-radius: 1000px;
         }
-       
-    </style>
 
+        .card-body {
+            background-color: darkslateblue;
+        }
+
+    </style>
 
 </head>
 
@@ -105,7 +98,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="WebsiteLogin.html">Log In</a>
+                        <a class="nav-link active" aria-current="page" href="WebsiteLogin.html">LogIn</a>
                     </li>
 
                 </ul>
@@ -116,99 +109,85 @@
 
 
 
-
-
-
-
-
     <div class="container">
         <div class="row">
             <br>
+            <div class="register">
+                <form>
 
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"></div>
+                    <h4><b>Login</b></h4>
 
-            <div class="col-md-3"></div>
-            <div class="col-md-6"></div>
-            <h4><b>REGISTER</b></h4>
+            </div>
+            <br>
 
-        </div>
-
-        <form action="WebsiteLogin.html">
-            <div class="container">
-
-
-                <div class="row">
-
-                    <br>
-                    <label class="label col-md-2 control-label"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Enter Username</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" name="name" id="Input1" placeholder="name">
-                    </div>
+            <div class="row">
+                <label class="label col-md-2 control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                <div class="col-md-4">
+                    <input type="email" class="form-control" name="email" id="Input1" placeholder="name@gmail.com">
                 </div>
+            </div>
 
-                <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-                    <div class="col-md-4">
-                        <input type="email" class="form-control" name="email" id="Input2" placeholder="name@gmail.com">
-                    </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password</label>
+                <div class="col-md-4">
+                    <input type="password" class="form-control" name="password" id="Input2" placeholder="password">
+
                 </div>
-
-                <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password</label>
-                    <div class="col-md-4">
-                        <input type="password" class="form-control" name="password" id="Input3" placeholder="password">
-                        <small>Password must be 8 characters</small>
-                    </div>
-                </div>
-
-                <br>
-                <div class="row">
-                    <label class="label col-md-2 control-label"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Confirm Password</label>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" name="confirm" id="Input4" placeholder="confirm password">
-
-
-                    </div>
-                    <p>
-                        <small id="error"></small>
-                    </p>
-                </div>
-
-                <input type="submit" div class="btn btn-info" value="signup" onclick="validatePassword()">
+                <!-- <a href="#"><div class="btn btn-secondary">Login</div></a>
+            -->
             </div>
 
 
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="submit" div class="btn btn-danger" value="Login" onclick="return validateUser()">
+                </div>
 
-   
-    </form>
-  
+            <!--</div>-->
+
+            <div class="col-md-3">
+                <div class="btn btn-light">Cancel</div>
+
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        </form>
+    </div>
+    
+    <div class="col-md-3"></div>
+
 
     </div>
 
 
 
     <script>
-        function validatePassword() {
-            var email = document.getElementById("Input2").value;
-            var pass = document.getElementById("Input3").value;
-            var cpass = document.getElementById("Input4").value;
+        function validateUser() {
+            var emailId = document.getElementById("Input1").value;
+            var password = document.getElementById("Input2").value;
 
-            if (pass == cpass) {
-               
-                document.getElementById("error").innerHTML = "";
-                    localStorage.setItem("emailid", email);
-                    localStorage.setItem("password", pass);
-                
+            var email = localStorage.getItem("emailid");
+            var pass = localStorage.getItem("password");
 
-               
+            if (emailId == email && password == pass) {
+                alert("Success");
                 return true;
             }
             else {
-                document.getElementById("error").innerHTML = "password does not match";
-                return false;
+                alert("Fail to login");
             }
-
         }
 
     </script>
@@ -221,8 +200,17 @@
 
 
 
+
+
+
     <br>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <div class="card">
@@ -235,6 +223,8 @@
 
         </div>
     </div>
+
+
 
 
 
